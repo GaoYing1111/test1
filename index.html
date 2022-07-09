@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单</title>
+    <style>
+        div{
+        width: 180%;
+        text-align: center;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div>
+    <form action="03列表.html" method="post" name="form1">
+        <h3>用户注册</h3>
+
+        <label for="username">用户名:</label>
+<!-- 作用：  用于绑定一个表单元素, 当点击label标签的时候, 被绑定的表单元素就会获得输入焦点 -->
+       <input type="text" maxlength="12" placeholder="请输入用户名" /><br>
+        <!-- 隐藏域 -->
+        <input type="hidden" value="001"/><br>
+
+        <label for="password">密码：</label>
+        <input type="password" placeholder="请输入密码"/><br>
+
+        <label for="number">手机号码：</label>
+        <input type="tel" maxlength="11" placeholder="请输入手机号"><br>
+
+        <label for="sex">性别：</label>
+        <input type="radio" name="sex" value="男"> 男
+        <input type="radio" name="sex" value="女" checked> 女<br>
+        <!-- 设计name都为sex系统会认为两个是一起的，就不能双选 -->
+
+        爱好：<input type="checkbox" value="游戏"/>游戏
+        <input type="checkbox" value="音乐"/>音乐
+        <input type="checkbox" value="美食" checked/>美食
+        <input type="checkbox" value="绘画"/>绘画<br>
+
+        个人荣誉：<input type="file"/><br>
+
+        照片：<input type="image" src="../imgs/女1.jpg"/ width="80px"/><br>
+        
+        出生日期：<input type="date"/><br>
+
+        <label for="self">个人介绍</label><br>
+        <!--  cols="每行中的字符数" rows="显示的行数" -->
+        <textarea id="self" name="introduce" rows="10" cols="30" maxlength="50"></textarea>
+        <br>
+        学历：
+        <select name="xueli">
+            <option value="-1">请选择-学历</option>
+            <option value="1">专科</option>
+            <!-- selected默认被选中 -->
+            <option value="2">本科</option>
+            <option value="3">研究生</option>
+            <option value="4">博士</option>
+        </select><br>
+        <button type="button">普通按钮</button><br>
+
+        <input type="submit" value="提交"/>
+        <input type="reset" value="重置"/><br>
+<!-- 等同：<button type="submit">提交</button>
+<button type="reset">提交</button> -->
+
+    </form>
+</div>
+</body>
+</html>
